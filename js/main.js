@@ -7,7 +7,10 @@ $(function () {
 	    var s = skrollr.init({
     //            edgeStrategy: 'set',
 		constants: {
-		    h: h
+		    h: h,
+                    h2: h*2,
+                    h3: h*3,
+                    h4: h*4
 		},
 		easing: {
 		    stepper: function (p) {
