@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<title>Neuer Titel von Nussi</title>
+
+	<link href="style/fixed-positioning.css" rel="stylesheet" type="text/css" />
+	<link href="style/main.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="fixedTimeline">
+<div>
+	<div>
+		<p class="top">At The Beginning </br>There Was Nothing</p>
+	</div>
+
+
+
+
+
+	<script type="text/javascript" src="js/util/scrollr.js"></script>
+
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="dist/skrollr.ie.min.js"></script>
+		<![endif]-->
+
+		<script type="text/javascript">
+		var s = skrollr.init({
+			edgeStrategy: 'set',
+			easing: {
+				WTF: Math.random,
+				inverted: function(p) {
+					return 1-p;
+				}
+			}
+		});
+	</script>
+</body>
+
+</html>
