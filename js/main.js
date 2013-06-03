@@ -30,6 +30,6 @@ $(function () {
             
             
             
-            window.scrollTo(0,h*12);
+            window.scrollTo(0, h*12);
     
 	});
