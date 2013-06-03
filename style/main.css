@@ -7,8 +7,6 @@
 
 }
 
-.top {
-    font-family: arial;
-    font-size: 97px;
-    text-align: center;
-}
+.page { position:relative;}
+.text { position: absolute; font-family: 'Average Sans', sans-serif;}
+#text1 {position: absolute; font-family: 'Roboto', sans-serif; left: 100px; top: 20px;}

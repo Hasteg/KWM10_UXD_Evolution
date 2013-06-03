@@ -9,17 +9,54 @@
 
 	<link href="style/fixed-positioning.css" rel="stylesheet" type="text/css" />
 	<link href="style/main.css" rel="stylesheet" type="text/css" />
+	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Average+Sans' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
 	<div id="fixedTimeline">
 	</div>
 		
-	<div id="main">
-		<div data-0="left:0px;" data-100="left:-9999px;">
-			<p class="top" >At The Beginning </br>There Was Nothing</p>
-		</div>
-	</div>
+
+	
+<div class="page">
+    <div id="text1"><p>At the beginning there is nothing, not even time or space</p></div>
+</div>
+<div class="page">
+    <div id="text2" class="text"><p>And suddenly there is the big bang and a universe appears</p></div>
+</div>
+<div class="page">
+    <div id="text3" class="text"><p>The universe is small but it’s expanding at an incredible speed</p></div>
+</div>
+<div class="page">
+    <div id="text4" class="text"><p>First it’s just a blur ...</p></div>
+</div>
+<div class="page">
+    <div id="text5" class="text"><p>...but with energy matter gets formed and elementary particles appear</p></div>
+</div>
+<div class="page">
+    <div id="text6" class="text"><p>That all happens in the first seconds</p></div>
+</div>
+<div class="page">
+    <div id="text7" class="text"><p>Neutrons and protons connect to each other and electrons circle them</p></div>
+</div>
+<div class="page">
+    <div id="text8" class="text"><p>Neutrons, protons and electrons form atoms</p></div>
+</div>
+<div class="page">
+    <div id="text9" class="text"><p>Now the universe consists of clouds of atoms</p></div>
+</div>
+<div class="page">
+    <div id="text10" class="text"><p>Gravity starts to compact these clouds and the temperature at the centre of each
+        cloud begins to rise</p></div>
+</div>
+<div class="page">
+    <div id="text11" class="text"><p>When the temperature rises to 10 Mio degrees, atoms start to fuse, there is a huge
+        release of energy and BAM we have our first star</p></div>
+</div>
+<div class="page">
+    <div id="text12" class="text"><p>From now on stars begin to appear all through the universe</p></div>
+</div>
 
 
 
@@ -27,41 +64,11 @@
 	<script type="text/javascript" src="js/util/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	
-	<!--[if lt IE 9]>
-	<script type="text/javascript" src="dist/skrollr.ie.min.js"></script>
-	<![endif]-->
 	
 	<script type="text/javascript">
 
 
-	$(function () {
-	    var h = $(window).height();
-	    $('.page').height(h);
-    
-	    var s = skrollr.init({
-    //            edgeStrategy: 'set',
-		constants: {
-		    h: h
-		},
-		easing: {
-		    stepper: function (p) {
-    //                    return p;
-			return Math.round(p * 3) / 3;
-		    }
-    //            WTF: Math.random,
-    //            inverted: function(p) {
-    //                return 1-p;
-    //            }
-		}
-	    });
-	    
-	    console.log(h);
-    
-	    s.on('render', function() {
-		console.log(s.getScrollTop());
-	    })
-    
-	});
+	
     </script>
 </body>
 
