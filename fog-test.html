@@ -4,29 +4,102 @@
 	<meta charset="utf-8">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
+	<link href="style/fixed-positioning.css" rel="stylesheet" type="text/css" />
+	<link href="style/main.css" rel="stylesheet" type="text/css" />
 	<title>Fog Test</title>
 
 	<link href="style/fixed-positioning.css" rel="stylesheet" type="text/css" />
 	<link href="style/fog.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="js/util/scrollr.js"></script>
+	<script type="text/javascript" src="js/util/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 </head>
 
 <body>
-	<div id="fog-bg"></div>
+	<p class="top" >At The Beginning </br>There Was Nothing</p>
 	
+	<!-- <div id="fog-bg" />
+	<div class="fog fog1"></div>
+	<div class="fog fog2"></div> -->
+	<div id="bgfog1" class="bgfog fog1" data-500="opacity:0;left:0px;" data-1000="opacity:0.2;" data-3000="left:-100px;"></div>
+	<div id="bgfog2" class="bgfog fog4" data-500="opacity:0;left:-400px;top:-400px;" data-1000="opacity:0.23;" data-3000="left:-50px;top:-400px"></div>
+	<div id="bgfog3" class="bgfog fog3" data-500="opacity:0;left:-50px;top:450px;" data-1000="opacity:0.1;" data-2600="left:120px;opacity:0.3;" data-3000="top:430px;pacity:0.2"></div>
+	<div id="bgfog4" class="bgfog fog2" data-500="opacity:0;" data-1000="opacity:0.21;" data-2000="opacity:0.12;" data-3000="opacity:0.23;"></div>
+<!-- 	<div class="fog fog5"></div>
+	<div class="fog fog6"></div>
+	<div class="fog fog1"></div>
+	<div class="fog fog2"></div>
+	<div class="fog fog3"></div>
+	<div class="fog fog4"></div>
+	<div class="fog fog5"></div>
+	<div class="fog fog6"></div> -->	
+	
+	
+	
+	<script type="text/javascript">
 
+
+	$(function () {
+	    var h = $(window).height();
+	    $('.page').height(h);
+    
+	    var s = skrollr.init({
+    //            edgeStrategy: 'set',
+		constants: {
+		    h: h
+		},
+		easing: {
+		    stepper: function (p) {
+    //                    return p;
+			return Math.round(p * 3) / 3;
+		    }
+    //            WTF: Math.random,
+    //            inverted: function(p) {
+    //                return 1-p;
+    //            }
+		}
+	    });
+	    
+	    console.log(h);
+    
+	    s.on('render', function() {
+		console.log(s.getScrollTop());
+	    })
+    
+	});
+    </script>
 	
 
 	<script type="text/javascript">
-	var s = skrollr.init({
-		edgeStrategy: 'set',
-		easing: {
-			WTF: Math.random,
-			inverted: function(p) {
-				return 1-p;
-			}
+	// var s = skrollr.init({
+		// edgeStrategy: 'set',
+		// easing: {
+			// WTF: Math.random,
+			// inverted: function(p) {
+				// return 1-p;
+			// }
+		// }
+	// });
+	
+	function cl (text) {console.log(text)};
+	function cw (text) {console.warn(text)};
+	function ce (text) {console.error(text)};
+	
+	function createfog () {
+		var fogs = document.getElementsByClassName('fog');
+		for (var i=0,fog; fog=fogs[i];i++) {
+			fog.style.top = [Math.random() * 540 - 540, 'px'].join('');
+			fog.style.left = [Math.random() * 960 - 960, 'px'].join('');
+			fog.style['-webkit-transform'] = ['scale(', Math.random() * 0.4,')'].join('');
+			fog.style['opacity'] = Math.random() * 0.3 + .1;
 		}
-	});
+	}
+	
+	function animatebgFont(i) {
+		
+	}
+	
+	createfog();
 	</script>
 </body>
 

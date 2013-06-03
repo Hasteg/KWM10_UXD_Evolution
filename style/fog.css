@@ -1,14 +1,37 @@
-* {
-	margin:0px; 
-	padding:0px;
-}
-
-html, body {
-	height: 100%;
-	width: 100%;
+body {
+	background: black;
 }
 
 #fog-bg {
 	height: 100%;
 	background:black;
 }
+
+.fog {
+	position: fixed;
+	top: 0 ;
+	left: 0 ;
+	height:1080px;
+	width:1920px;
+}
+
+.bgfog {
+	top: 0 ;
+	left: 0 ;
+	height:1080px;
+	width:1920px;
+	opacity: .2;
+	position:fixed;	
+}
+
+#bgfog4 {
+	left: -900px; 
+	
+}
+
+.fog1 {	background: url(../img/fog/fog1.png); }
+.fog2 {	background: url(../img/fog/fog2.png); }
+.fog3 { background: url(../img/fog/fog3.png); }
+.fog4 { background: url(../img/fog/fog4.png); }
+.fog5 { background: url(../img/fog/fog5.png); }
+.fog6 { background: url(../img/fog/fog6.png); }
