@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<title>Neuer Titel von Nussi</title>
+
+	<link href="style/fixed-positioning.css" rel="stylesheet" type="text/css" />
+	<link href="style/main.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div id="fixedTimeline">
+	</div>
+		
+	<div id="main">
+		<div data-0="left:0px;" data-100="left:-9999px;">
+			<p class="top" >At The Beginning </br>There Was Nothing</p>
+		</div>
+	</div>
+
+
+
+	<script type="text/javascript" src="js/util/scrollr.js"></script>
+	<script type="text/javascript" src="js/util/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	
+	<!--[if lt IE 9]>
+	<script type="text/javascript" src="dist/skrollr.ie.min.js"></script>
+	<![endif]-->
+	
+	<script type="text/javascript">
+
+
+	$(function () {
+	    var h = $(window).height();
+	    $('.page').height(h);
+    
+	    var s = skrollr.init({
+    //            edgeStrategy: 'set',
+		constants: {
+		    h: h
+		},
+		easing: {
+		    stepper: function (p) {
+    //                    return p;
+			return Math.round(p * 3) / 3;
+		    }
+    //            WTF: Math.random,
+    //            inverted: function(p) {
+    //                return 1-p;
+    //            }
+		}
+	    });
+	    
+	    console.log(h);
+    
+	    s.on('render', function() {
+		console.log(s.getScrollTop());
+	    })
+    
+	});
+    </script>
+</body>
+
+</html>
+
+</html>
